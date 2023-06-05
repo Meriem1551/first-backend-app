@@ -1,9 +1,9 @@
 const express = require('express');
 const hello= express();
-hello.get('/message',(req,res)=>{
+hello.get('/',(req,res)=>{
     return res.send(`Goodafternoon i wish you like my work!`);
 })
-hello.get('/error',(req,res)=>{
+hello.get('*',(req,res)=>{
     return res.send(`404 ERROR`);
 })
 hello.listen(3000,()=>{
